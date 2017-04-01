@@ -52,7 +52,7 @@
   	  					 	<property name="actualbuildtype" value="${buildtype}"/>
   					    </else>
   	</if>
-	<echo message="resource dir: ${maven.build.resourceDir}, Source Dir: ${build.basesrcdir}/src/main/java"/>
+	<echo message="resource dir: ${maven.build.resourceDir}, Source Dir: ${build.basesrcdir}/src/com/edureka/bankservice"/>
    <property file="${build.basesrcdir}/build.properties"/>
    <artifact:pom id="pom" file="pom.xml" />
    <property name="actualbuildname" value="${pom.artifactId}"/>
@@ -62,8 +62,8 @@
    <property name="maven.build.finalName" value="${actualbuildname}-${actualversion}"/>
    <property name="maven.build.dir" value="${build.basesrcdir}/target"/>
    <property name="maven.build.outputDir" value="${maven.build.dir}/classes"/>
-   <property name="maven.build.srcDir" value="${build.basesrcdir}/src/main/java"/>
-   <property name="maven.build.testDir" value="${build.basesrcdir}/src/test/java"/>
+   <property name="maven.build.srcDir" value="${build.basesrcdir}/src/com/edureka/bankservice"/>
+   <property name="maven.build.testDir" value="${build.basesrcdir}/src/com/edureka/bankservice/testcase"/>
    <property name="maven.build.testResourceDir" value="${build.basesrcdir}/src/test/resources"/>
    <property name="maven.build.testOutputDir" value="${maven.build.dir}/test-classes"/>
    <property name="maven.test.reports" value="${maven.build.dir}/test-reports"/>
