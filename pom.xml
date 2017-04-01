@@ -8,10 +8,7 @@
     <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
+        <directory>src</directory>        
       </resource>
     </resources>
     <plugins>
@@ -30,6 +27,22 @@
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
+      <plugin>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0</version>
+      <configuration>
+        <parallel>methods</parallel>
+        <threadCount>10</threadCount>
+        <includes>
+          <include>**/Test*.java</include>
+          <include>**/Test.java</include>
+          <include>**/TestCase.java</include>
+        </includes>
+        <excludes>
+          <exclude>**/*Abstract*Test.java</exclude>
+        </excludes>
+      </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>
